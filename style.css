@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+main {
+  width: 400px;
+  height: 400px;
+  margin: 100px auto;
+  position: relative;
+}
+
+div {
+  width: 200px;
+  height: 200px;
+}
+.message {
+  font-size: 4rem;
+  text-align: center;
+  line-height: 200px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  
+}
+.box {
+  position: absolute;
+}
+.blue-box {
+  background-color: steelblue;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+}
+.yellow-box {
+  background-color: yellow;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom left;
+}
+.gray-box {
+  background-color: dimgray;
+  top: 0;
+  right: 0;
+  transform-origin: top right;
+}
+.brown-box {
+  background-color: rosybrown;
+  bottom: 0;
+  right: 0;
+  transform-origin: bottom right;
+}
+main:hover .box {
+  transition: 1s;
+}
+
+main:hover .blue-box,
+main:hover .brown-box {
+  transform: rotate(90deg);
+}
+
+main:hover .yellow-box,
+main:hover .gray-box {
+  transform: rotate(-90deg);
+}
